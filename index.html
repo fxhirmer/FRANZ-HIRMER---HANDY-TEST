@@ -1801,6 +1801,54 @@ header .franz-mobile-nav{display:none}
  header .franz-mobile-nav a{padding:11px 12px;border-radius:8px;background:var(--surface,#fff8ea);color:var(--text,#243b30);text-decoration:none;font-size:16px}
 }
 </style>
+
+<style id="franz-handy-feinschliff-20261112">
+/* Ausschließlich Smartphone/Tablet: Desktop und Baukasten bleiben unverändert. */
+@media (max-width: 1023px) {
+  #lebensweg .grid, #lebensweg .grid > div { min-width:0; }
+  #lebensweg [data-drag-id^="lebensweg-"] {
+    width:100% !important; max-width:100% !important;
+    min-width:0 !important; height:auto !important;
+    transform:none !important; box-sizing:border-box !important;
+  }
+  #lebensweg [data-drag-id^="lebensweg-"] > div,
+  #lebensweg [data-drag-id^="lebensweg-"] p {
+    max-width:100% !important; min-width:0 !important;
+    height:auto !important; overflow-wrap:break-word;
+  }
+  #lebensweg [data-drag-id="lebensweg-title"] h2 {
+    font-size:clamp(28px,5.5vw,42px) !important;
+    line-height:1.18 !important; overflow-wrap:break-word;
+  }
+  #lebensweg [data-drag-id="lebensweg-kicker"] > div {font-size:clamp(20px,4.5vw,27px) !important;}
+  #lebensweg [data-drag-id="lebensweg-quotebox"] {margin:0 !important;}
+  #lebensweg [data-drag-id="lebensweg-quotebox"] > div {padding:14px !important;}
+  #lebensweg [data-drag-id="lebensweg-intro"],
+  #lebensweg [data-drag-id="lebensweg-p1"],
+  #lebensweg [data-drag-id="lebensweg-p2"] {margin:0 0 22px !important;}
+  #lebensweg [data-drag-id="lebensweg-intro"] p,
+  #lebensweg [data-drag-id="lebensweg-p1"] p,
+  #lebensweg [data-drag-id="lebensweg-p2"] p {
+    width:100% !important; max-width:100% !important;
+    height:auto !important; font-size:clamp(17px,2.5vw,20px) !important;
+    line-height:1.65 !important; text-align:left !important;
+    word-break:normal; overflow-wrap:break-word;
+  }
+  #lebensweg [data-drag-id^="lebensweg-c"] {margin:0 !important;}
+  #lebensweg [data-drag-id^="lebensweg-c"] > div {width:100% !important; height:auto !important;}
+  #root [data-drag-id="hero-stats"] span,
+  #root [data-drag-id="hero-stats"] strong {font-size:inherit;}
+}
+@media (max-width:650px) {
+  #lebensweg {padding-left:18px !important; padding-right:18px !important;}
+  #lebensweg .grid {grid-template-columns:minmax(0,1fr) !important; gap:22px !important;}
+  #lebensweg .grid.sm\:grid-cols-2 {grid-template-columns:minmax(0,1fr) !important;gap:14px !important;}
+  #lebensweg .space-y-12, #lebensweg .space-y-6 {min-width:0;}
+  #jakobsweg .ce-poster {max-width:100% !important;}
+  #jakobsweg .ce-poster > img:first-child {width:100% !important;height:auto !important;}
+  #jakobsweg .franz-mobile-poster-tip {display:block !important;}
+}
+</style>
 </head>
 <body class="">
 
@@ -4222,6 +4270,7 @@ AR-SA"> Die Dritte war ein Engel.</span></p></div></div><div class="grid sm:grid
 @media(max-width:650px){#jakobsweg .ce-poster>img.ce-real-book-cover{display:none}}
 </style>
 <h2 class="ce-title">Mein Jakobsweg</h2>
+<div class="franz-mobile-poster-tip" style="display:none;text-align:center;padding:12px 18px;font:16px/1.5 Georgia,serif;color:#17432e;background:#f5e7cf">Die große Jakobsweg-Bildseite lässt sich auf dem Handy vergrößert ansehen: <a href="assets/jakobsweg-wunschbild.jpg" target="_blank" rel="noopener" style="text-decoration:underline;font-weight:bold">Bild groß öffnen</a></div>
 <div class="ce-poster">
 <img src="assets/jakobsweg-wunschbild.jpg" alt="Jakobsweg-Erinnerungsalbum: Camino de Santiago, Pilgerbild, Gedanken, vier Reisen, Pilgerausrüstung, Video, Buch und Grußbuch" width="1024" height="1432"/>
 <img class="ce-real-book-cover" src="assets/buchcover-vorderseite.jpg" alt="Vollständiges Buchcover: Die Liebe ist ein gelber Pfeil, der nach Westen zeigt"/>
